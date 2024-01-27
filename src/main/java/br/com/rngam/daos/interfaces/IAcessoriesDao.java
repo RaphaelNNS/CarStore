@@ -1,4 +1,4 @@
-package br.com.rngam.models.interfaces;
+package br.com.rngam.daos.interfaces;
 
-public interface IAcessoriesModelDao {
+public interface IAcessoriesDao {
 }
