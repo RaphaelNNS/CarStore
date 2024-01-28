@@ -2,7 +2,6 @@ package br.com.rngam.daos;
 
 import br.com.rngam.daos.interfaces.ICarDao;
 import br.com.rngam.models.CarModel;
-import br.com.rngam.models.acessorieModel;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityManagerFactory;
 import jakarta.persistence.Persistence;

@@ -3,7 +3,7 @@ package br.com.rngam.models;
 import jakarta.persistence.*;
 
 @Entity(name = "TB_ACESSORIE")
-public class acessorieModel {
+public class AcessorieModel {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "acessorie_id_sq")
     @SequenceGenerator(name = "acessorie_id_sq", sequenceName = "sq_acessorie", initialValue = 1)

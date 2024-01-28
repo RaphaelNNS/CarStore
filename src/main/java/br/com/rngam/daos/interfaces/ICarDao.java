@@ -1,7 +1,6 @@
 package br.com.rngam.daos.interfaces;
 
 import br.com.rngam.models.CarModel;
-import br.com.rngam.models.acessorieModel;
 
 import java.util.List;
 

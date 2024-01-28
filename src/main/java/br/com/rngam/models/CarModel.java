@@ -16,7 +16,7 @@ public class CarModel {
     @Column(name = "type",  length = 50, nullable = false)
     private String type;
     @OneToMany(mappedBy = "car")
-    private List<acessorieModel> acessories;
+    private List<AcessorieModel> acessories;
     @ManyToOne
     @JoinColumn(name = "id_car_fk",
             foreignKey = @ForeignKey(name = "fk_car_description"),
@@ -50,11 +50,11 @@ public class CarModel {
         this.carBrand = carBrand;
     }
 
-    public List<acessorieModel> getAcessories() {
+    public List<AcessorieModel> getAcessories() {
         return acessories;
     }
 
-    public void setAcessories(List<acessorieModel> acessories) {
+    public void setAcessories(List<AcessorieModel> acessories) {
         this.acessories = acessories;
     }
 }

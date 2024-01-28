@@ -4,20 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cb517f94-d7a5-45bc-84c2-6b096a50f80e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/rngam/daos/BrandDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/rngam/daos/interfaces/IBrandDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/rngam/models/BrandModel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/br/com/rngam/BrandDaoTest.java" afterDir="false" />
+    <list default="true" id="cb517f94-d7a5-45bc-84c2-6b096a50f80e" name="Changes" comment="Car, brand and accessories entities have been added.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/br/com/rngam/daos/CarDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/rngam/daos/CarDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/rngam/daos/interfaces/IAcessoriesDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/rngam/daos/interfaces/IAcessoriesDao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/br/com/rngam/daos/interfaces/ICarDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/rngam/daos/interfaces/ICarDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/rngam/models/BrandModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/rngam/models/BrandModel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/br/com/rngam/models/CarModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/rngam/models/CarModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/rngam/models/acessorieModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/rngam/models/acessorieModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/rngam/models/acessorieModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/rngam/models/AcessorieModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/br/com/rngam/BrandDaoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/br/com/rngam/BrandDaoTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/br/com/rngam/CarModelTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/br/com/rngam/CarModelTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -50,6 +45,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "JUnit.BrandDaoTest.add.executor": "Run",
     "JUnit.BrandDaoTest.executor": "Run",
     "JUnit.CarModelTest.add.executor": "Run",
     "JUnit.CarModelTest.executor": "Run",
@@ -92,6 +88,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="BrandDaoTest.add" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="concessionariajpa" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="br.com.rngam.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="br.com.rngam" />
+      <option name="MAIN_CLASS_NAME" value="br.com.rngam.BrandDaoTest" />
+      <option name="METHOD_NAME" value="add" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="CarModelTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="concessionariajpa" />
       <extension name="coverage">
@@ -126,6 +138,7 @@
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.BrandDaoTest" />
+        <item itemvalue="JUnit.BrandDaoTest.add" />
         <item itemvalue="JUnit.CarModelTest.add" />
         <item itemvalue="JUnit.CarModelTest" />
       </list>
@@ -147,6 +160,20 @@
       <option name="presentableId" value="Default" />
       <updated>1705999967534</updated>
     </task>
+    <task id="LOCAL-00001" summary="Car, brand and accessories entities have been added.">
+      <option name="closed" value="true" />
+      <created>1706388908205</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1706388908205</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Update README.md - DB diagram" />
+    <MESSAGE value="Car, brand and accessories entities have been added." />
+    <option name="LAST_COMMIT_MESSAGE" value="Car, brand and accessories entities have been added." />
   </component>
 </project>

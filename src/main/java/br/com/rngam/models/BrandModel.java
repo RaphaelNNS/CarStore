@@ -3,6 +3,7 @@ package br.com.rngam.models;
 import jakarta.persistence.*;
 
 import java.util.List;
+import java.util.Objects;
 
 @Entity(name = "TB_BRAND")
 public class BrandModel {
@@ -57,5 +58,18 @@ public class BrandModel {
 
     public void setCarList(List<CarModel> carList) {
         this.carList = carList;
+    }
+
+    @Override
+    public boolean equals(Object object) {
+        if (this == object) return true;
+        if (object == null || getClass() != object.getClass()) return false;
+        BrandModel that = (BrandModel) object;
+        return id == that.id && Objects.equals(name, that.name) && Objects.equals(description, that.description) && Objects.equals(since, that.since);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, name, description, since, carList);
     }
 }
