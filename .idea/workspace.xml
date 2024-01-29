@@ -5,13 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cb517f94-d7a5-45bc-84c2-6b096a50f80e" name="Changes" comment="Car, brand and accessories entities have been added.">
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/rngam/daos/AccessoryDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/br/com/rngam/AccessoryDaoTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/br/com/rngam/daos/CarDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/rngam/daos/CarDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/rngam/daos/interfaces/ICarDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/rngam/daos/interfaces/ICarDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/rngam/daos/interfaces/IAcessoriesDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/rngam/daos/interfaces/IAccessoryDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/rngam/models/AcessorieModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/rngam/models/AccessoryModel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/br/com/rngam/models/BrandModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/rngam/models/BrandModel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/br/com/rngam/models/CarModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/rngam/models/CarModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/rngam/models/acessorieModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/rngam/models/AcessorieModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/br/com/rngam/BrandDaoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/br/com/rngam/BrandDaoTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/br/com/rngam/CarModelTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/br/com/rngam/CarModelTest.java" afterDir="false" />
     </list>
@@ -34,6 +36,9 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 2
 }</component>
@@ -45,6 +50,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "JUnit.AccessoryDaoTest.executor": "Run",
     "JUnit.BrandDaoTest.add.executor": "Run",
     "JUnit.BrandDaoTest.executor": "Run",
     "JUnit.CarModelTest.add.executor": "Run",
@@ -72,7 +78,22 @@
       <recent name="C:\Users\rngam\Downloads\projetosjava\concessionariajpa\src\test\java" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.BrandDaoTest">
+  <component name="RunManager" selected="JUnit.AccessoryDaoTest">
+    <configuration name="AccessoryDaoTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="concessionariajpa" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="br.com.rngam.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="br.com.rngam" />
+      <option name="MAIN_CLASS_NAME" value="br.com.rngam.AccessoryDaoTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="BrandDaoTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="concessionariajpa" />
       <extension name="coverage">
@@ -137,10 +158,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.AccessoryDaoTest" />
         <item itemvalue="JUnit.BrandDaoTest" />
-        <item itemvalue="JUnit.BrandDaoTest.add" />
-        <item itemvalue="JUnit.CarModelTest.add" />
         <item itemvalue="JUnit.CarModelTest" />
+        <item itemvalue="JUnit.CarModelTest.add" />
+        <item itemvalue="JUnit.BrandDaoTest.add" />
       </list>
     </recent_temporary>
   </component>
@@ -171,9 +193,38 @@
     <option name="localTasksCounter" value="2" />
     <servers />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Update README.md - DB diagram" />
     <MESSAGE value="Car, brand and accessories entities have been added." />
     <option name="LAST_COMMIT_MESSAGE" value="Car, brand and accessories entities have been added." />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/br/com/rngam/CarModelTest.java</url>
+          <line>35</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+    <pin-to-top-manager>
+      <pinned-members>
+        <PinnedItemInfo parentTag="br.com.rngam.models.CarModel" memberName="licensePlate" />
+        <PinnedItemInfo parentTag="br.com.rngam.models.BrandModel" memberName="since" />
+        <PinnedItemInfo parentTag="br.com.rngam.models.CarModel" memberName="carBrand" />
+      </pinned-members>
+    </pin-to-top-manager>
   </component>
 </project>

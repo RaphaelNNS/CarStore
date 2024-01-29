@@ -1,7 +1,12 @@
 package br.com.rngam;
 
+import br.com.rngam.daos.AccessoryDao;
 import br.com.rngam.daos.BrandDao;
+import br.com.rngam.daos.CarDao;
+import br.com.rngam.daos.interfaces.IAccessoryDao;
 import br.com.rngam.daos.interfaces.IBrandDao;
+import br.com.rngam.daos.interfaces.ICarDao;
+import br.com.rngam.models.AccessoryModel;
 import br.com.rngam.models.BrandModel;
 import br.com.rngam.models.CarModel;
 import org.junit.jupiter.api.AfterAll;
@@ -19,11 +24,12 @@ public class BrandDaoTest {
         dao = new BrandDao();
     }
 
+
     @Test
     public void add(){
         BrandModel brand = new BrandModel();
         brand.setSince(1950);
-        brand.setDescription("descrito");
+        brand.setDescription("descrito");   
         brand.setName("ferrari");
         brand.setCarList(new ArrayList<CarModel>());
         BrandModel brandModelAdded = dao.add(brand);
@@ -54,12 +60,13 @@ public class BrandDaoTest {
     }
 
     @AfterAll
-    public static void resetDB(){
-
-        IBrandDao dao = new BrandDao();
-        List<BrandModel> brandModelList = dao.listAll();
-        brandModelList.forEach(dao::remove);
+    public static void removeCarAndBrandAddeds(){
+        ICarDao carDao = new CarDao();
+        IBrandDao brandDao =  new BrandDao();
+        carDao.listAll().forEach(carDao::remove);
+        brandDao.listAll().forEach(brandDao::remove);
     }
+
 
 
 }

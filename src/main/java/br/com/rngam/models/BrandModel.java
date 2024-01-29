@@ -17,7 +17,7 @@ public class BrandModel {
     private String description;
     @Column(name = "since", length = 4, nullable = true)
     private Integer since;
-    @OneToMany(mappedBy = "brand")
+    @OneToMany(mappedBy = "carBrand")
     private List<CarModel> carList;
 
     public String getName() {

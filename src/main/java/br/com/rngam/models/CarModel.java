@@ -3,6 +3,7 @@ package br.com.rngam.models;
 import jakarta.persistence.*;
 
 import java.util.List;
+import java.util.Objects;
 
 @Entity
 @Table(name = "TB_CAR")
@@ -11,15 +12,13 @@ public class CarModel {
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "car_license_sq")
     @SequenceGenerator(name = "car_license_sq", sequenceName = "sq_car", initialValue = 1)
     private Integer licensePlate;
-    @Column(name = "brand", length = 50, nullable = false)
-    private String brand;
     @Column(name = "type",  length = 50, nullable = false)
     private String type;
     @OneToMany(mappedBy = "car")
-    private List<AcessorieModel> acessories;
+    private List<AccessoryModel> acessories;
     @ManyToOne
-    @JoinColumn(name = "id_car_fk",
-            foreignKey = @ForeignKey(name = "fk_car_description"),
+    @JoinColumn(name = "id_accessory_fk",
+            foreignKey = @ForeignKey(name = "fk_car_accessory"),
             referencedColumnName = "id", nullable = false
     )
     private BrandModel carBrand;
@@ -33,7 +32,13 @@ public class CarModel {
     }
 
 
+    public Integer getLicensePlate() {
+        return licensePlate;
+    }
 
+    public void setLicensePlate(Integer licensePlate) {
+        this.licensePlate = licensePlate;
+    }
     public String getType() {
         return type;
     }
@@ -50,11 +55,24 @@ public class CarModel {
         this.carBrand = carBrand;
     }
 
-    public List<AcessorieModel> getAcessories() {
+    public List<AccessoryModel> getAcessories() {
         return acessories;
     }
 
-    public void setAcessories(List<AcessorieModel> acessories) {
+    @Override
+    public boolean equals(Object object) {
+        if (this == object) return true;
+        if (object == null || getClass() != object.getClass()) return false;
+        CarModel carModel = (CarModel) object;
+        return Objects.equals(licensePlate, carModel.licensePlate) && Objects.equals(type, carModel.type) && Objects.equals(carBrand, carModel.carBrand);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(licensePlate, type, acessories, carBrand);
+    }
+
+    public void setAcessories(List<AccessoryModel> acessories) {
         this.acessories = acessories;
     }
 }

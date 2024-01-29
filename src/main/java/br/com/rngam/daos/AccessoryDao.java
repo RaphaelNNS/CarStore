@@ -1,7 +1,7 @@
 package br.com.rngam.daos;
 
-import br.com.rngam.daos.interfaces.ICarDao;
-import br.com.rngam.models.BrandModel;
+import br.com.rngam.daos.interfaces.IAccessoryDao;
+import br.com.rngam.models.AccessoryModel;
 import br.com.rngam.models.CarModel;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityManagerFactory;
@@ -13,33 +13,34 @@ import jakarta.persistence.criteria.Root;
 
 import java.util.List;
 
-public class CarDao implements ICarDao {
+public class AccessoryDao implements IAccessoryDao {
+
     @Override
-    public CarModel add(CarModel carModel) {
+    public AccessoryModel add(AccessoryModel accessory) {
         EntityManagerFactory entityManagerFactory =
                 Persistence.createEntityManagerFactory("ExemploJPA");
         EntityManager entityManager = entityManagerFactory.createEntityManager();
 
         entityManager.getTransaction().begin();
-        entityManager.persist(carModel);
+        entityManager.persist(accessory);
         entityManager.getTransaction().commit();
 
         entityManager.close();
         entityManagerFactory.close();
 
 
-        return carModel;
+        return accessory;
     }
 
     @Override
-    public void remove(CarModel carModel) {
+    public void remove(AccessoryModel accessoryModel) {
         EntityManagerFactory entityManagerFactory =
                 Persistence.createEntityManagerFactory("ExemploJPA");
         EntityManager entityManager = entityManagerFactory.createEntityManager();
 
         entityManager.getTransaction().begin();
-        carModel = entityManager.merge(carModel);
-        entityManager.remove(carModel);
+        accessoryModel = entityManager.merge(accessoryModel);
+        entityManager.remove(accessoryModel);
         entityManager.getTransaction().commit();
 
         entityManager.close();
@@ -47,24 +48,23 @@ public class CarDao implements ICarDao {
     }
 
     @Override
-    public List<CarModel> listAll() {
+    public List<AccessoryModel> listAll() {
         EntityManagerFactory entityManagerFactory =
                 Persistence.createEntityManagerFactory("ExemploJPA");
         EntityManager entityManager = entityManagerFactory.createEntityManager();
 
 
         CriteriaBuilder builder = entityManager.getCriteriaBuilder();
-        CriteriaQuery<CarModel> query = builder.createQuery(CarModel.class);
-        Root<CarModel> root = query.from(CarModel.class);
+        CriteriaQuery<AccessoryModel> query = builder.createQuery(AccessoryModel.class);
+        Root<AccessoryModel> root = query.from(AccessoryModel.class);
         query.select(root);
 
-        TypedQuery<CarModel> tpQuery =
+        TypedQuery<AccessoryModel> tpQuery =
                 entityManager.createQuery(query);
-        List<CarModel> list = tpQuery.getResultList();
+        List<AccessoryModel> list = tpQuery.getResultList();
 
         entityManager.close();
         entityManagerFactory.close();
         return list;
     }
-
 }
