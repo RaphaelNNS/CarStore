@@ -5,4 +5,5 @@ This repository was created as part of an exercise proposed by a mentor at EBAC 
 
 
 ## DB-DIAGRAM
-![Diagrama em branco (2)](https://github.com/RaphaelNNS/CarStore/assets/77383914/7ae5d257-d08d-42c2-9eeb-06a38e3f0274)
+![Diagrama em branco](https://github.com/RaphaelNNS/CarStore/assets/77383914/1245da4a-26d3-406b-a404-e6fdc91b959f)
+
